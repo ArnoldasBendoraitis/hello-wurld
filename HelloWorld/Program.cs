@@ -14,7 +14,8 @@ namespace HelloWorld
             {
                 Console.WriteLine("Program requires at least one argument");
             }
-            Console.WriteLine(string.Format("Hello {0}!", args[0]));
+            var module = new HelloModule();
+            Console.WriteLine(module.SayHello(args[0]));
             Console.ReadLine();
         }
     }
