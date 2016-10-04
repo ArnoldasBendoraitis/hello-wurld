@@ -10,7 +10,11 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            if (args.Length < 1)
+            {
+                Console.WriteLine("Program requires at least one argument");
+            }
+            Console.WriteLine(string.Format("Hello {0}!", args[0]));
             Console.ReadLine();
         }
     }
